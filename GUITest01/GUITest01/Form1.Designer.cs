@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUITest));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.readyLabel = new System.Windows.Forms.Label();
+            this.startPatch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.exeLabel = new System.Windows.Forms.Label();
@@ -44,18 +50,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openFolder = new System.Windows.Forms.FolderBrowserDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.startPatch = new System.Windows.Forms.Button();
-            this.readyLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +75,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox1);
@@ -87,6 +91,91 @@
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button5.Location = new System.Drawing.Point(5, 126);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 24);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Info";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button4.Location = new System.Drawing.Point(60, 126);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(65, 24);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Website";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.readyLabel);
+            this.panel7.Controls.Add(this.startPatch);
+            this.panel7.Location = new System.Drawing.Point(10, 290);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(480, 50);
+            this.panel7.TabIndex = 8;
+            // 
+            // readyLabel
+            // 
+            this.readyLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.readyLabel.ForeColor = System.Drawing.Color.White;
+            this.readyLabel.Location = new System.Drawing.Point(1, 0);
+            this.readyLabel.Name = "readyLabel";
+            this.readyLabel.Size = new System.Drawing.Size(326, 50);
+            this.readyLabel.TabIndex = 6;
+            this.readyLabel.Text = "Files are ready for patching.";
+            this.readyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.readyLabel.Visible = false;
+            this.readyLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            // 
+            // startPatch
+            // 
+            this.startPatch.BackColor = System.Drawing.SystemColors.Highlight;
+            this.startPatch.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.startPatch.FlatAppearance.BorderSize = 2;
+            this.startPatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startPatch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startPatch.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.startPatch.Location = new System.Drawing.Point(330, 0);
+            this.startPatch.Margin = new System.Windows.Forms.Padding(0);
+            this.startPatch.Name = "startPatch";
+            this.startPatch.Size = new System.Drawing.Size(150, 50);
+            this.startPatch.TabIndex = 5;
+            this.startPatch.Text = "Patch";
+            this.startPatch.UseVisualStyleBackColor = false;
+            this.startPatch.Visible = false;
+            this.startPatch.Click += new System.EventHandler(this.startPatch_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(301, 45);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Prologue Patch v1.0";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -98,6 +187,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(500, 150);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // panel6
             // 
@@ -182,13 +272,14 @@
             this.statusBarLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.statusBarLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusBarLabel.ForeColor = System.Drawing.Color.Silver;
-            this.statusBarLabel.Location = new System.Drawing.Point(401, 0);
+            this.statusBarLabel.Location = new System.Drawing.Point(255, 0);
             this.statusBarLabel.Margin = new System.Windows.Forms.Padding(0);
             this.statusBarLabel.Name = "statusBarLabel";
-            this.statusBarLabel.Size = new System.Drawing.Size(99, 17);
+            this.statusBarLabel.Size = new System.Drawing.Size(245, 17);
             this.statusBarLabel.TabIndex = 0;
-            this.statusBarLabel.Text = "Program ready.";
+            this.statusBarLabel.Text = "Patcher ready. Choose a folder to begin.";
             this.statusBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.statusBarLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // panel2
             // 
@@ -253,55 +344,6 @@
             // 
             this.openFolder.HelpRequest += new System.EventHandler(this.openFolder_HelpRequest);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(301, 45);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Prologue Patch v1.0";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.readyLabel);
-            this.panel7.Controls.Add(this.startPatch);
-            this.panel7.Location = new System.Drawing.Point(10, 290);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(480, 50);
-            this.panel7.TabIndex = 8;
-            // 
-            // startPatch
-            // 
-            this.startPatch.BackColor = System.Drawing.SystemColors.Highlight;
-            this.startPatch.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.startPatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startPatch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startPatch.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.startPatch.Location = new System.Drawing.Point(330, 0);
-            this.startPatch.Margin = new System.Windows.Forms.Padding(0);
-            this.startPatch.Name = "startPatch";
-            this.startPatch.Size = new System.Drawing.Size(150, 50);
-            this.startPatch.TabIndex = 5;
-            this.startPatch.Text = "Patch";
-            this.startPatch.UseVisualStyleBackColor = false;
-            this.startPatch.Visible = false;
-            // 
-            // readyLabel
-            // 
-            this.readyLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.readyLabel.ForeColor = System.Drawing.Color.White;
-            this.readyLabel.Location = new System.Drawing.Point(1, 0);
-            this.readyLabel.Name = "readyLabel";
-            this.readyLabel.Size = new System.Drawing.Size(326, 50);
-            this.readyLabel.TabIndex = 6;
-            this.readyLabel.Text = "Files are ready for patching.";
-            this.readyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.readyLabel.Visible = false;
-            // 
             // GUITest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,14 +351,16 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(502, 402);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUITest";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "GUI Test";
+            this.Text = "Koiken Otome Prologue Patch Setup";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -325,7 +369,6 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,6 +394,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button startPatch;
         private System.Windows.Forms.Label readyLabel;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 
