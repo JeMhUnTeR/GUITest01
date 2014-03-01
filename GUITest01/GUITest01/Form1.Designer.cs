@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUITest));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.exeLabel = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.statusBarLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.openFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.startPatch = new System.Windows.Forms.Button();
+            this.readyLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +73,12 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 30);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
@@ -67,28 +87,87 @@
             this.panel4.TabIndex = 2;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 150);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.exeLabel);
+            this.panel6.Location = new System.Drawing.Point(10, 250);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(480, 30);
+            this.panel6.TabIndex = 5;
+            // 
+            // exeLabel
+            // 
+            this.exeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.exeLabel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.exeLabel.ForeColor = System.Drawing.Color.White;
+            this.exeLabel.Location = new System.Drawing.Point(0, 0);
+            this.exeLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.exeLabel.Name = "exeLabel";
+            this.exeLabel.Size = new System.Drawing.Size(480, 30);
+            this.exeLabel.TabIndex = 0;
+            this.exeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button3.Location = new System.Drawing.Point(404, 213);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 30);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Browse";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Location = new System.Drawing.Point(10, 213);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(390, 30);
+            this.panel5.TabIndex = 1;
+            // 
             // textBox1
             // 
             this.textBox1.AllowDrop = true;
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox1.BackColor = System.Drawing.Color.Silver;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(10, 250);
+            this.textBox1.Location = new System.Drawing.Point(5, 2);
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(400, 22);
+            this.textBox1.Size = new System.Drawing.Size(378, 22);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "C:\\Program Files\\Koiken Otome";
+            this.textBox1.Text = "File path to Koiken Otome installation folder...";
             this.textBox1.WordWrap = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.statusBarLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 380);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
@@ -97,19 +176,19 @@
             this.panel3.TabIndex = 1;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
-            // label2
+            // statusBarLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(401, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Program ready.";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.statusBarLabel.AutoSize = true;
+            this.statusBarLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.statusBarLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusBarLabel.ForeColor = System.Drawing.Color.Silver;
+            this.statusBarLabel.Location = new System.Drawing.Point(401, 0);
+            this.statusBarLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.statusBarLabel.Name = "statusBarLabel";
+            this.statusBarLabel.Size = new System.Drawing.Size(99, 17);
+            this.statusBarLabel.TabIndex = 0;
+            this.statusBarLabel.Text = "Program ready.";
+            this.statusBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel2
             // 
@@ -131,14 +210,16 @@
             this.label1.Location = new System.Drawing.Point(5, 5);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 20);
+            this.label1.Size = new System.Drawing.Size(250, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Koiken Otome Prologue Patch 1.0 Setup";
+            this.label1.Text = "Koiken Otome Prologue Patch Setup";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,13 +229,14 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 24);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Hide";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,9 +246,61 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 24);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Quit";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFolder
+            // 
+            this.openFolder.HelpRequest += new System.EventHandler(this.openFolder_HelpRequest);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(301, 45);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Prologue Patch v1.0";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.readyLabel);
+            this.panel7.Controls.Add(this.startPatch);
+            this.panel7.Location = new System.Drawing.Point(10, 290);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(480, 50);
+            this.panel7.TabIndex = 8;
+            // 
+            // startPatch
+            // 
+            this.startPatch.BackColor = System.Drawing.SystemColors.Highlight;
+            this.startPatch.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.startPatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startPatch.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startPatch.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.startPatch.Location = new System.Drawing.Point(330, 0);
+            this.startPatch.Margin = new System.Windows.Forms.Padding(0);
+            this.startPatch.Name = "startPatch";
+            this.startPatch.Size = new System.Drawing.Size(150, 50);
+            this.startPatch.TabIndex = 5;
+            this.startPatch.Text = "Patch";
+            this.startPatch.UseVisualStyleBackColor = false;
+            this.startPatch.Visible = false;
+            // 
+            // readyLabel
+            // 
+            this.readyLabel.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.readyLabel.ForeColor = System.Drawing.Color.White;
+            this.readyLabel.Location = new System.Drawing.Point(1, 0);
+            this.readyLabel.Name = "readyLabel";
+            this.readyLabel.Size = new System.Drawing.Size(326, 50);
+            this.readyLabel.TabIndex = 6;
+            this.readyLabel.Text = "Files are ready for patching.";
+            this.readyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.readyLabel.Visible = false;
             // 
             // GUITest
             // 
@@ -183,10 +317,15 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,8 +339,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label statusBarLabel;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.FolderBrowserDialog openFolder;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label exeLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button startPatch;
+        private System.Windows.Forms.Label readyLabel;
     }
 }
 
